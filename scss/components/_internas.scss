@@ -1,0 +1,279 @@
+////////// quem somos
+
+.qs-texts {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  h2 {
+    // Também oferecemos aos nossos clientes suporte personalizado das  áreas técnico-administrativas e a expertise de parceiros estratégicos.
+    color: var(--pure-black);
+    font-size: 20px;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 30px;
+    word-wrap: break-word;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+}
+
+.img-qs {
+  img {
+    // height: 600px;
+    height: 65vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.proposito-qs {
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+  h1 {
+    color: var(--text-color-main);
+    font-size: 34px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    line-height: 44.88px;
+    word-wrap: break-word;
+    padding-bottom: 16px;
+    margin: 0;
+  }
+
+  h2 {
+    // Imprimir a marca REAG no mercado financeiro como um grupo com atuação independente e agregador de valor em um ambiente colaborativo, ético e recompensador para clientes, acionistas, parceiros, sócios e colaboradores.
+    color: var(--pure-black);
+    font-size: 20px;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 30px;
+    word-wrap: break-word;
+  }
+}
+
+.section-valores-qs {
+  width: 100%;
+  background-color: var(--bg-internas);
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.title-valores {
+  padding-bottom: 40px;
+  h1 {
+    color: var(--pure-white);
+    font-family: var(--font-sans);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+}
+
+.container-itens-valores {
+  display: flex;
+  gap: 24px;
+}
+
+.itens-valores {
+  //   width: 270px;
+  width: 100%;
+
+  img {
+    width: 35px;
+  }
+
+  h1 {
+    color: var(--pure-white);
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 35px;
+    padding-bottom: 8px;
+    margin: 0;
+  }
+
+  span {
+    // Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quam elit
+    color: #dddddd;
+    font-size: 16px;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+  }
+}
+
+///////// lideranca
+
+.container-lider {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.content-lider {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+}
+
+.timeline__item {
+  display: flex;
+  align-items: center;
+
+  h3 {
+    margin: 0;
+    color: var(--txt-timeline);
+    padding: 0;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  img {
+    width: 200px;
+    // height: 250px;
+    object-fit: cover;
+  }
+
+  h1 {
+    color: var(--txt-timeline);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+
+  span {
+    color: var(--pure-black);
+    font-size: 16px;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.texts-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+  .content-lider {
+    grid-template-columns: auto auto auto;
+  }
+
+  .cards-lider {
+    .img-card-lider {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .content-lider {
+    grid-template-columns: auto auto;
+  }
+
+  .container-itens-valores {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 670px) {
+  .content-lider {
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 497px) {
+  .container-itens-valores {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 56px;
+  }
+}
+
+.wrapper-diretoria {
+  gap: 24px;
+}
+
+.redes-menu-mobile {
+  border-top: 1px solid gray;
+  padding-top: 20px;
+}
+
+.title-redes-mobile {
+  span {
+    // Siga a REAG nas redes sociais:
+    color: #666666;
+    font-size: 18px;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 27px;
+    word-wrap: break-word;
+  }
+}
+
+.imgs-redes-mobile {
+  display: flex;
+  gap: 20px;
+  padding-top: 12px;
+
+  img {
+    width: 27px;
+  }
+}
+
+.carousel .carousel-inner .carousel-item .carousel-content {
+  z-index: 0 !important;
+}
+
+.imgs-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+// .header .content .nav-menu-header>ul .header-navigation-item .dropdown-toggle:hover {
+//   border: 1px solid red;
+// }
+
+.header
+  .content
+  .nav-menu-header
+  > ul
+  .header-navigation-item
+  .dropdown-toggle:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: var(--text-color-main);
+  transition: width 0.3s;
+}
+
+.header
+  .content
+  .nav-menu-header
+  > ul
+  .header-navigation-item
+  .dropdown-toggle:hover:after {
+  width: 100%;
+}
+
+.logo-white {
+  object-fit: cover;
+  width: 200px;
+}
+
+
+.carousel-indicators  {
+  display: none !important;
+}
+
