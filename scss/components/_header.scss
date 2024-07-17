@@ -46,7 +46,7 @@
         margin: 0;
         gap: 40px;
 
-        @media (max-width: 1299px) {
+        @media (max-width: 1462px) {
           gap: 28px;
         }
 
@@ -64,10 +64,10 @@
             font-family: var(--font-family-titles, Gotham);
             font-size: var(--font-font-size-font-size-body-large, 16px);
             font-style: normal;
-            font-weight: 700;
+            font-weight: 800;
             line-height: 116%;
             transition: 0.3s;
-            padding: 24px 0px;
+            padding-bottom: 24px;
 
             &:hover {
               transition: 0.3s;
@@ -114,7 +114,7 @@
             transition: 0.3s;
             opacity: 0;
             box-shadow: 0px 6px 8px 1px rgb(0 0 0 / 14%);
-            padding: 24px 8px;
+            padding: 19px 8px;
 
             &.show {
               display: flex;
@@ -130,7 +130,6 @@
                 color: var(--pure-black);
                 padding: 4px 8px;
                 transition: 0.3s;
-                // white-space: normal;
                 color: var(--nav-link-nav-link-default, #383838);
                 font-family: var(--font-family-titles, Gotham);
                 font-size: var(--font-font-size-font-size-body-large, 16px);
@@ -714,13 +713,17 @@
 .itens-main-menu {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-top: 24px;
-  // padding-bottom: 24px;
+
+  @media (max-width: 1199px) {
+    // padding: 20px 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+  }
 
   .logo {
     img {
-      // width: 230px;
     }
   }
 }

@@ -75,7 +75,7 @@
 }
 
 .icon-aumentar-fonte:before {
-  content: "\e909";
+  content: url(../../images/aumentar-fonte.svg);
   color: #1d1d1d;
 }
 .icon-arrow-down:before {
@@ -100,7 +100,8 @@
   color: #1d1d1d;
 }
 .icon-diminuir-fonte:before {
-  content: "\e905";
+  // content: "\e905";
+  content: url(../../images/diminuir-fonte.svg);
   color: #1d1d1d;
 }
 .icon-exibir:before {

@@ -1,9 +1,12 @@
 .table {
+  table-layout: fixed;
+
   thead {
     tr {
       border-bottom: 1px solid var(--text-color-main);
 
       th {
+        vertical-align: middle;
         width: 50%;
         text-align: start !important;
         padding: 8px 16px;
@@ -12,10 +15,7 @@
         font-size: var(--font-font-size-font-size-body-small, 12px);
         font-style: normal;
         font-weight: 700;
-        line-height: var(
-          --font-line-height-font-size-body-small,
-          18px
-        ); /* 150% */
+        line-height: var(--font-line-height-font-size-body-small, 18px);
 
         span {
           font-weight: 400;
@@ -130,6 +130,55 @@
 
     tr {
       border: 1px solid white !important;
+    }
+  }
+}
+
+.table {
+  tr {
+    td {
+      p {
+        color: var(--text-body-large, #383838);
+        font-family: var(--font-family-body, "Open Sans");
+        font-size: var(--font-font-size-font-size-body-large, 16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: var(
+          --font-line-height-font-size-body-large,
+          26px
+        ); /* 162.5% */
+      }
+    }
+  }
+}
+
+.table-central {
+  thead {
+    tr {
+      th {
+        width: 300px !important;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        width: 300px !important;
+      }
+    }
+  }
+
+  img {
+    margin: unset !important;
+  }
+
+  .block-link {
+    width: 100%;
+    cursor: help;
+
+    img {
+      opacity: 0.2;
     }
   }
 }
