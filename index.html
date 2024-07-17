@@ -32,7 +32,10 @@
       content="Somos um grupo financeiro independente com o grande propósito de desenvolver soluções	de investimentos personalizadas no mercado brasileiro."
     />
 
-    <meta property="og:image" content="https://monteiro-aranha.vercel.app/images/thumbnail_monteiro_aranha.jpg" />
+    <meta
+      property="og:image"
+      content="https://monteiro-aranha.vercel.app/images/thumbnail_monteiro_aranha.jpg"
+    />
 
     <link preload="" rel="stylesheet" href="vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="vendor/basic-table.min.css" />
@@ -331,30 +334,30 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu-div">
+      <div class="logo-mobile-main">
+        <picture class="branding">
+          <img
+            class="logo-mobile"
+            src="images/logo-white-aranha.svg"
+            alt="Monteiro Aranha"
+          />
+        </picture>
+
+        <div class="div-menu-open">
+          <button
+            type="button"
+            class="toggle-mobile-menu"
+            aria-label="Fechar Menu"
+            title="Fechar "
+          >
+            <img src="images/close-mobile.svg" alt="" />
+          </button>
+        </div>
+      </div>
+
       <div class="container container-responsivo-full">
         <aside class="mobile-menu">
-          <div class="header-menu">
-            <picture class="branding">
-              <img
-                class="logo-mobile"
-                src="./images/logo-prisma-branca.svg"
-                alt="Prisma"
-              />
-            </picture>
-            <div class="div-menu-open">
-              <p>Fechar</p>
-              <button
-                type="button"
-                class="toggle-mobile-menu"
-                aria-label="Fechar Menu"
-                title="Fechar "
-              >
-                <span class="icon-nav"></span>
-              </button>
-            </div>
-          </div>
           <div class="middle-header">
             <div class="menu-tools">
               <div class="div-pesquisar-mobile">
@@ -366,9 +369,8 @@
                   data-bs-placement="bottom"
                   aria-label="Pesquisar"
                   title="Pesquisar"
-                >
-                  <i class="icon-busca"></i>
-                </button>
+                ></button>
+
                 <input
                   name="ctl00$searchId"
                   type="text"
@@ -376,20 +378,18 @@
                   class="inputBuscaMobile"
                   placeholder="Pesquisar"
                 />
+                <i class="icon-busca"></i>
               </div>
-              <p>Aperte Enter para pesquisar</p>
             </div>
+
             <div class="institucional-and-language">
-              <a href="" target="_blank"> Institucional </a>
               <ul>
                 <li id="btnPt" class="active">
-                  <a href="javascript:__doPostBack('ctl00$hlkCulturaPtBr','')">
-                    PT
-                  </a>
+                  <a href="#"> Português </a>
                 </li>
                 <li id="btnEn">
                   <a href="javascript:__doPostBack('ctl00$hlkCulturaEnUS','')">
-                    EN
+                    Inglish
                   </a>
                 </li>
               </ul>
@@ -402,13 +402,13 @@
                 <h3>
                   <button
                     type="button"
-                    class="accordion-button collapsed"
+                    class="accordion-btn-mobile collapsed"
                     aria-expanded="false"
                     data-bs-toggle="collapse"
                     data-bs-target="#mobile-menu-1"
                     aria-controls="mobile-menu-1"
                   >
-                    Institucional
+                    A Empresa
                   </button>
                 </h3>
                 <div
@@ -434,11 +434,12 @@
                   </div>
                 </div>
               </div>
+
               <div class="accordion-item">
                 <h3>
                   <button
                     type="button"
-                    class="accordion-button collapsed"
+                    class="accordion-btn-mobile collapsed"
                     aria-expanded="false"
                     data-bs-toggle="collapse"
                     data-bs-target="#mobile-menu-2"
@@ -482,11 +483,12 @@
                   </div>
                 </div>
               </div>
+
               <div class="accordion-item">
                 <h3>
                   <button
                     type="button"
-                    class="accordion-button collapsed"
+                    class="accordion-btn-mobile collapsed"
                     aria-expanded="false"
                     data-bs-toggle="collapse"
                     data-bs-target="#mobile-menu-3"
@@ -515,17 +517,18 @@
                   </div>
                 </div>
               </div>
+
               <div class="accordion-item">
                 <h3>
                   <button
                     type="button"
-                    class="accordion-button collapsed"
+                    class="accordion-btn-mobile collapsed"
                     aria-expanded="false"
                     data-bs-toggle="collapse"
                     data-bs-target="#mobile-menu-4"
                     aria-controls="mobile-menu-4"
                   >
-                    Serviços aos Investidores
+                    Informações Financeiras
                   </button>
                 </h3>
                 <div
@@ -545,25 +548,38 @@
                   </div>
                 </div>
               </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button
+                    type="button"
+                    class="accordion-btn-mobile collapsed"
+                    aria-expanded="false"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mobile-menu-5"
+                    aria-controls="mobile-menu-5"
+                  >
+                    Contato
+                  </button>
+                </h3>
+                <div
+                  id="mobile-menu-5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionMenuMobile"
+                >
+                  <div class="accordion-body">
+                    <ul class="pages">
+                      <li class="item">
+                        <a href="" target="_self">Calendário de Eventos</a>
+                      </li>
+                      <li class="item">
+                        <a href="" target="_self">Fale com o RI</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </nav>
-          </div>
-
-          <div class="redes-menu-mobile">
-            <div class="title-redes-mobile">
-              <span>aaa</span>
-            </div>
-
-            <div class="imgs-redes-mobile">
-              <a href="" target="_blank"
-                ><img src="../images/icons/icon-insta-mobile.png"
-              /></a>
-              <a href="" target="_blank"
-                ><img src="../images/icons/icon-face-mobile.png"
-              /></a>
-              <a href="" target="_blank"
-                ><img src="../images/icons/icon-twitter-mobile.png"
-              /></a>
-            </div>
           </div>
         </aside>
       </div>

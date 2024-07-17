@@ -156,7 +156,11 @@
   thead {
     tr {
       th {
-        width: 300px !important;
+        // width: 300px !important;
+
+        @media (max-width: 1462px) {
+          width: 300px !important;
+        }
       }
     }
   }

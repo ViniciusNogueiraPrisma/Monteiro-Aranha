@@ -336,7 +336,6 @@
   }
 
   .active-link-paginacao {
-    // REAG Invetimentos S.A
     color: var(--text-color-main);
     font-size: 18px;
     font-family: var(--font-sans);
@@ -346,7 +345,6 @@
   }
 
   .not-active-link-paginacao {
-    // REAG DTVM
     color: #dddddd;
     font-size: 16px;
     font-family: var(--font-sans);
@@ -1082,7 +1080,6 @@ footer {
     font-family: "ESL Legend", sans-serif;
     font-size: 20px;
     color: #fff;
-
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -1518,6 +1515,9 @@ footer {
   box-shadow: unset !important;
   transition: 0.6s !important;
   border: 1px solid var(--accent-color-accent, #812532);
+  // border-top: 1px solid #812532;
+  // border-right: 1px solid #812532;
+  // border-left: 1px solid #812532;
 }
 
 .accordion {
@@ -1578,7 +1578,7 @@ footer {
     border-bottom-right-radius: 2px;
 
     .accordion-body {
-      padding-top: 0px;
+      padding-top: 24px;
       padding-bottom: 24px;
       padding-left: 24px;
       padding-right: 24px;
@@ -2528,4 +2528,29 @@ footer {
       margin-bottom: 0px;
     }
   }
+}
+
+.logo-mobile-main {
+  background-color: #812532;
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-btn-mobile {
+  border: unset;
+  background-color: unset;
+  color: var(--nav-link-nav-link-default, #383838);
+  font-family: var(--font-family-titles, Gotham);
+  font-size: var(--font-font-size-font-size-body-large, 16px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 116%; /* 18.56px */
+  transition: 0.3s;
+}
+
+.accordion-btn-mobile[aria-expanded="true"] {
+  color: #812532;
+  transition: 0.3s;
 }

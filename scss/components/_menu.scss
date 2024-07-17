@@ -22,11 +22,7 @@ body {
   margin-left: auto;
   height: 100vh;
   position: relative;
-  // padding-left: 32px;
-  // padding-right: 32px;
-  // padding-top: 24px;
-  // padding-bottom: 24px;
-  padding: 24px;
+  padding-top: 40px;
 
   width: 100%;
 
@@ -36,6 +32,7 @@ body {
   &.active {
     transform: translateX(0);
   }
+
   .header-menu {
     display: flex;
     justify-content: flex-end;
@@ -78,14 +75,17 @@ body {
 
   .menu-tools {
     display: block;
-    margin-top: 16px;
 
     .div-pesquisar-mobile {
       display: flex;
+      align-items: center;
       gap: 8px;
       padding: 6px;
-      //   border: 1px solid var(--grey-scale-02);
-      border: 1px solid #d3d3d3;
+      padding-right: 16px;
+      padding-left: 0px;
+      border-radius: 4px;
+      border: 1px solid var(--colors-grey-grey-85, #dedede);
+      background: var(--surface-surface-light-alternative, #f7f7f7);
       border-radius: 4px;
 
       button {
@@ -111,7 +111,14 @@ body {
         color: var(--pure-black);
 
         &::placeholder {
-          color: var(--pure-black);
+          color: var(--colors-grey-70, #e0e0e0);
+
+          /* Menu/Page */
+          font-family: var(--font-family-titles, Gotham);
+          font-size: var(--font-font-size-font-size-body-large, 16px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: var(--font-line-height-font-size-body-large, 26px);
         }
       }
     }
@@ -133,7 +140,6 @@ body {
     margin-bottom: 16px;
 
     > a {
-      //   color: var(--text-white);
       color: black;
     }
 
@@ -147,8 +153,18 @@ body {
 
       li {
         a {
-          //   color: var(--text-white);
-          color: black;
+          color: var(--text-body-large, #383838);
+          text-align: center;
+
+          /* Body/Md/Bold */
+          font-family: var(--font-family-body, "Open Sans");
+          font-size: var(--font-font-size-font-size-body-medium, 14px);
+          font-style: normal;
+          font-weight: 700;
+          line-height: var(
+            --font-line-height-font-size-body-medium,
+            24px
+          ); /* 171.429% */
           text-decoration: none;
         }
 
@@ -291,39 +307,28 @@ body {
         padding: 0;
 
         .pages {
-          padding-left: 24px;
-          padding-bottom: 8px;
-          padding-top: 16px;
+          border-radius: 4px;
+          background: var(--surface-surface-light-alternative, #f7f7f7);
+          padding: 24px 8px;
           margin: 16px 0;
-          background-color: #dddddd;
 
           li {
             list-style: none;
-            margin-bottom: 8px;
-
-            @media (max-width: 575px) {
-              margin-bottom: 12px;
-            }
+            margin-bottom: 12px;
+            width: 100%;
 
             a {
+              display: flex;
+              width: 100%;
+              padding: 0px 8px;
               text-decoration: none;
-              //   color: var(--text-white);
-              color: gray;
+              color: var(--nav-link-nav-link-default, #383838);
+              font-family: var(--font-family-titles, Gotham);
+              font-size: var(--font-font-size-font-size-body-large, 16px);
+              font-style: normal;
+              font-weight: 600;
+              line-height: var(--font-line-height-font-size-body-large, 26px);
             }
-
-            /*
-						&.link-externo{
-							a{
-								display: flex;
-								align-items: center;
-								gap: 8px;
-
-								&::after{
-									content: url("../images/icon/icon-externo.svg");
-									height: 18px;
-								}
-							}
-						}*/
           }
         }
       }
