@@ -413,13 +413,13 @@ body {
 }
 
 .dropdown-menu::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  transform: rotate(45deg);
-  background-color: #dadada;
-  position: absolute;
-  top: -5px;
-  z-index: -1;
-  left: 8px;
+  // content: "";
+  // width: 10px;
+  // height: 10px;
+  // transform: rotate(45deg);
+  // background-color: #fff;
+  // position: absolute;
+  // top: -5px;
+  // z-index: -1;
+  // left: 8px;
 }

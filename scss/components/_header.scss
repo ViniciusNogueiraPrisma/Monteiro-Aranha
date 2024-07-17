@@ -65,7 +65,20 @@
             font-size: var(--font-font-size-font-size-body-large, 16px);
             font-style: normal;
             font-weight: 700;
-            line-height: 116%; /* 18.56px */
+            line-height: 116%;
+            transition: 0.3s;
+            padding: 24px 0px;
+
+            &:hover {
+              transition: 0.3s;
+              color: var(--nav-link-nav-link-active, #812532);
+
+              img {
+                transform: rotate(0deg);
+                filter: none;
+                transition: 0.3s;
+              }
+            }
 
             img {
               transition: 0.3s;
@@ -92,25 +105,21 @@
 
           .dropdown-menu {
             top: 100% !important;
-            border-radius: 0px;
+            border-radius: 0px 0px 4px 4px;
+            background: var(--surface-surface-light-alternative, #f7f7f7);
             border: none;
             padding: 0;
-            max-width: 210px;
+            max-width: fit-content;
+            width: fit-content;
             transition: 0.3s;
             opacity: 0;
-            // background-color: var(--pure-white);
-            background-color: rgb(218, 218, 218);
             box-shadow: 0px 6px 8px 1px rgb(0 0 0 / 14%);
-
-            // &:after {
-            //   // content: "▲";
-            //   position: absolute;
-            //   // top: -17px;
-            //   color: rgb(218, 218, 218);
-            // }
+            padding: 24px 8px;
 
             &.show {
-              display: block;
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
             }
 
             li {
@@ -119,13 +128,19 @@
               .dropdown-item {
                 font-size: rem(14);
                 color: var(--pure-black);
-                padding: 8px 16px;
+                padding: 4px 8px;
                 transition: 0.3s;
-                white-space: normal;
+                // white-space: normal;
+                color: var(--nav-link-nav-link-default, #383838);
+                font-family: var(--font-family-titles, Gotham);
+                font-size: var(--font-font-size-font-size-body-large, 16px);
+                font-style: normal;
+                font-weight: 500;
+                line-height: var(--font-line-height-font-size-body-large, 26px);
 
                 &:hover {
-                  color: var(--text-white);
-                  background-color: var(--text-color-main);
+                  color: var(--nav-link-nav-link-hover, #b23345);
+                  background-color: transparent;
                 }
               }
             }
@@ -701,7 +716,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 24px;
-  padding-bottom: 24px;
+  // padding-bottom: 24px;
 
   .logo {
     img {

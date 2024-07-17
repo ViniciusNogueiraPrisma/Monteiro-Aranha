@@ -9,48 +9,6 @@ function debounce(callback, delay) {
   };
 }
 
-// função para atualizar o background do footer com base no data-theme
-// document.addEventListener("DOMContentLoaded", function () {
-//   const footerItem1 = document.querySelector(".footer-fixed");
-//   const footerItem2 = document.querySelector(".footer");
-//   const body = document.querySelector("body");
-
-//   function updateFooterBackground() {
-//     const dataTheme = body.getAttribute("data-theme");
-//     const url = window.location.pathname;
-
-//     if (url === "/" || url === "/default.aspx") {
-//       footerItem1.style.backgroundColor = "var(--pure-white)";
-//       footerItem2.style.backgroundColor = "var(--pure-white)";
-//     } else {
-//       footerItem1.style.backgroundColor = "#EEEEEE";
-//       footerItem2.style.backgroundColor = "#EEEEEE";
-//     }
-
-//     if (dataTheme === "dark") {
-//       footerItem1.style.backgroundColor = "initial";
-//       footerItem2.style.backgroundColor = "initial";
-//     }
-//   }
-
-//   function checkThemeAndURL() {
-//     updateFooterBackground();
-//   }
-//   checkThemeAndURL();
-
-//   const observer = new MutationObserver(function (mutations) {
-//     mutations.forEach(function (mutation) {
-//       if (mutation.attributeName === "data-theme") {
-//         checkThemeAndURL();
-//       }
-//     });
-//   });
-
-//   observer.observe(body, { attributes: true });
-
-//   updateFooterBackground();
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   let clicked = false;
 
@@ -58,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
 
     if (clicked) {
-      console.log("click ok")
+      console.log("click ok");
     }
 
     clicked = true;
@@ -160,6 +118,81 @@ $("#contrast-toggle").on("click", function (e) {
 });
 
 /* Hover do menu */
+
+//script timeline
+(function ($) {
+  $(function () {
+    $(window).on("scroll", function () {
+      fnOnScroll();
+    });
+
+    $(window).on("resize", function () {
+      fnOnResize();
+    });
+
+    var agTimeline = $(".js-timeline"),
+      agTimelineLine = $(".js-timeline_line"),
+      agTimelineLineProgress = $(".js-timeline_line-progress"),
+      agTimelinePoint = $(".js-timeline-card_point-box"),
+      agTimelineItem = $(".js-timeline_item"),
+      agOuterHeight = $(window).outerHeight(),
+      agHeight = $(window).height(),
+      f = -1,
+      agFlag = false;
+
+    function fnOnScroll() {
+      agPosY = $(window).scrollTop();
+
+      fnUpdateFrame();
+    }
+
+    function fnOnResize() {
+      agPosY = $(window).scrollTop();
+      agHeight = $(window).height();
+
+      fnUpdateFrame();
+    }
+
+    function fnUpdateWindow() {
+      agFlag = false;
+
+      agTimelineLine.css({
+        top:
+          agTimelineItem.first().find(agTimelinePoint).offset().top -
+          agTimelineItem.first().offset().top,
+        bottom:
+          agTimeline.offset().top +
+          agTimeline.outerHeight() -
+          agTimelineItem.last().find(agTimelinePoint).offset().top,
+      });
+
+      f !== agPosY && ((f = agPosY), agHeight, fnUpdateProgress());
+    }
+
+    function fnUpdateProgress() {
+      var agTop = agTimelineItem.last().find(agTimelinePoint).offset().top;
+
+      i = agTop + agPosY - $(window).scrollTop();
+      a = agTimelineLineProgress.offset().top + agPosY - $(window).scrollTop();
+      n = agPosY - a + agOuterHeight / 2;
+      i <= agPosY + agOuterHeight / 2 && (n = i - a);
+      agTimelineLineProgress.css({ height: n + "px" });
+
+      agTimelineItem.each(function () {
+        var agTop = $(this).find(agTimelinePoint).offset().top;
+
+        agTop + agPosY - $(window).scrollTop() < agPosY + 0.5 * agOuterHeight
+          ? $(this).addClass("js-ag-active")
+          : $(this).removeClass("js-ag-active");
+      });
+    }
+
+    function fnUpdateFrame() {
+      agFlag || requestAnimationFrame(fnUpdateWindow);
+      agFlag = true;
+    }
+  });
+})(jQuery);
 
 $(
   ".header .nav-menu-header .header-navigation-item > .dropdown-toggle"
