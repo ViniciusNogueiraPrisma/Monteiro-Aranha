@@ -2563,6 +2563,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  overflow: hidden;
 }
 
 .timeline-items::before {
@@ -2598,14 +2599,16 @@ footer {
   border-radius: 50%;
   top: 10px;
 }
+
 .timeline-date {
   color: var(--colors-grey-70, #e0e0e0);
   font-family: var(--font-family-titles, Gotham);
   font-size: var(--font-font-size-font-size-display, 72px);
   font-style: normal;
   font-weight: 300;
-  line-height: var(--font-line-height-font-size-display, 88px); /* 122.222% */
+  line-height: var(--font-line-height-font-size-display, 88px);
 }
+
 .timeline-content {
   border-radius: 5px;
 }
