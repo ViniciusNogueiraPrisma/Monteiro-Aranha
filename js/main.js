@@ -219,6 +219,29 @@ document
     });
   });
 
+// troca das imagens em quem somos
+document.querySelectorAll(".infos a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const imgElement = document.querySelector(".img img");
+    const textElement = document.querySelector(".img p");
+    const imgSrc = link.getAttribute("data-img");
+    const imgText = link.getAttribute("data-text");
+
+    imgElement.classList.add("fade-out");
+    textElement.classList.add("fade-out");
+
+    setTimeout(() => {
+      imgElement.src = imgSrc;
+      textElement.textContent = imgText;
+
+      imgElement.classList.remove("fade-out");
+      textElement.classList.remove("fade-out");
+    }, 300);
+  });
+});
+
 /* Carousels */
 
 $(document).ready(function () {

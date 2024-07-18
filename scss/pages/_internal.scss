@@ -793,6 +793,24 @@ footer {
       display: flex;
       gap: 32px;
 
+      .img img {
+        max-width: 100%;
+        height: auto;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .img img.fade-out {
+        opacity: 0;
+      }
+
+      .img p {
+        transition: opacity 0.3s ease-in-out;
+      }
+      .img p.fade-out {
+        opacity: 0;
+      }
+
       @media (max-width: 1400px) {
         gap: 16px;
       }
