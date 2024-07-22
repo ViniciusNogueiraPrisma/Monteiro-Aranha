@@ -2679,3 +2679,30 @@ footer {
     left: 0;
   }
 }
+
+.title-busca {
+  margin: 80px 0px;
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    color: var(--accent-color-accent, #812532);
+    font-family: var(--font-family-titles, Gotham);
+    font-size: var(--font-font-size-font-size-h2, 32px);
+    font-style: normal;
+    font-weight: 800;
+    line-height: var(--font-line-height-font-size-h2, 40px);
+  }
+
+  .list-resultados-busca {
+    margin-top: 42px;
+
+    li {
+      color: var(--text-titles-titles, #ffffff);
+      font-family: var(--font-family-titles, Gotham);
+      font-size: var(--font-font-size-font-size-h2, 16px);
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+}

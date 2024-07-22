@@ -39,32 +39,26 @@
 }
 
 .primary-button {
-  border-color: #007245;
+  border-color: #812532;
   color: var(--pure-white);
-  background-color: #007245;
+  background-color: #812532;
   border-radius: 2px;
-  font-weight: 200;
+  font-weight: 600;
   transition: 0.7s !important;
   gap: 8px;
-
   width: fit-content !important;
 
   img {
-    // display: none;
     opacity: 1;
-    // position: absolute;
-    // margin-right: -134px;
     transition: 0.4s;
   }
 
   &:hover img {
     transition: 0.4s;
     opacity: 1;
-    // display: block;
   }
 
   &:hover {
-    // padding-right: 50px;
     gap: 8px;
     color: var(--pure-white);
     transition: 0.7s !important;
@@ -141,9 +135,9 @@
   padding: 0px;
   margin: 0px;
 
-  // border-color: #007245;
+  // border-color: #812532;
   color: var(--pure-white);
-  // background-color: #007245;
+  // background-color: #812532;
   border-radius: 2px;
   font-weight: 200;
   transition: 0.7s !important;

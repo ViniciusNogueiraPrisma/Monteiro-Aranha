@@ -151,8 +151,8 @@ p,
 
   color: var(--text-color);
 
-  // font-family: var(--font-text-1);
-  font-family: var(--font-roboto);
+  // font-family: var(--font-family-titles, Gotham);
+  font-family: var(--font-family-titles, Gotham);
 
   &:not(:last-of-type) {
     margin-bottom: 24px;
@@ -217,7 +217,7 @@ small,
 }
 
 li {
-  font-family: var(--font-text-1);
+  font-family: var(--font-family-titles, Gotham);
   color: var(--text-color);
   margin-bottom: 8px;
 }
@@ -227,7 +227,7 @@ a {
   line-height: 155%;
 
   // font-family: var(--font-text-2);
-  font-family: var(--font-roboto);
+  font-family: var(--font-family-titles, Gotham);
 
   &:hover {
     color: var(--text-primary-01-var-1);
